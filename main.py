@@ -61,7 +61,6 @@ for i in name_list:
     usd_value = float(usd_bid['bid'])
 
     usd = float(name_assets*usd_value)
-    print(usd)
     usd_list.append(usd)
 
     '''
@@ -71,6 +70,11 @@ for i in name_list:
     bid_value = float(bid['bid'])
     print(bid_value) 
     '''
-print("-------------------------------")
 large = max(usd_list)
-print(large)
+index = usd_list.index(large)
+base_cur = name_list[index]
+print(base_cur)
+
+name = base_cur + '/' + crypto
+
+print(name)
